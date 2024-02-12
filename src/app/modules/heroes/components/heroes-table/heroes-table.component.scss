@@ -1,0 +1,19 @@
+.material-icons {
+    cursor: pointer;
+    color: gray;
+    margin-right: 20px;
+
+    &:hover {
+        color: #810c85ee;
+    }
+}
+
+tr.mat-mdc-row:hover {
+    background-color: lightgray;
+}
+
+.mat-mdc-header-row {
+    background-color: #b9e9ee;
+    font-size: 16px;
+    font-weight: 500;
+}

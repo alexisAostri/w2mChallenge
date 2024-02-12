@@ -1,0 +1,57 @@
+<mat-card class="narrow-card">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="form-container">
+            <form class="form" [formGroup]="newHeroForm">
+                <div class="input-row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" matInput formControlName="name" maxlength="40" appUpperCase />
+                        <mat-error *ngIf="newHeroForm.get('name')?.hasError('required')">El nombre es
+                            requerido</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="ml-30">
+                        <mat-label>Apodo</mat-label>
+                        <input type="text" matInput formControlName="nickName" maxlength="40" />
+                        <mat-error *ngIf="newHeroForm.get('nickName')?.hasError('required')">El apodo es
+                            requerido</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Poder principal</mat-label>
+                        <input type="text" matInput formControlName="mainPower" maxlength="40" />
+                        <mat-error *ngIf="newHeroForm.get('mainPower')?.hasError('required')">El poder principal es
+                            requerido</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="ml-30">
+                        <mat-label>Nacionalidad</mat-label>
+                        <input type="text" matInput formControlName="nationality" maxlength="20" />
+                        <mat-error *ngIf="newHeroForm.get('nationality')?.hasError('required')">La nacionalidad es
+                            requerida</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Edad</mat-label>
+                        <input type="number" matInput formControlName="years" />
+                        <mat-error *ngIf="newHeroForm.get('years')?.hasError('required')">La edad es
+                            requerida</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="buttons">
+                    <button mat-raised-button type="button" (click)="cancel()">Cancelar</button>
+                    <button class="ml-30" mat-raised-button color="primary" type="button"
+                        (click)="save(newHeroForm.value)" [disabled]="newHeroForm.invalid">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

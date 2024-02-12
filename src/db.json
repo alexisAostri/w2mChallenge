@@ -1,0 +1,124 @@
+{
+  "heroes": [
+    {
+      "id": "A1B",
+      "name": "Superman",
+      "nickName": "El Hombre de Acero",
+      "mainPower": "Volar",
+      "years": 35,
+      "nationality": "EEUU"
+    },
+    {
+      "id": "C2D",
+      "name": "Batman",
+      "nickName": "El Caballero Oscuro",
+      "mainPower": "Saltar",
+      "years": 40,
+      "nationality": "Jamaica"
+    },
+    {
+      "id": "E3F",
+      "name": "Wonder Woman",
+      "nickName": "La Mujer Maravilla",
+      "mainPower": "Latigo",
+      "years": 3000,
+      "nationality": "Peru"
+    },
+    {
+      "id": "G4H",
+      "name": "Spider-Man",
+      "nickName": "El Hombre Araña",
+      "mainPower": "Sentido arácnido",
+      "years": 23,
+      "nationality": "Uruguay"
+    },
+    {
+      "id": "I5J",
+      "name": "Iron Man",
+      "nickName": "El Hombre de Hierro",
+      "mainPower": "Inteligencia",
+      "years": 50,
+      "nationality": "Brasil"
+    },
+    {
+      "id": "K6L",
+      "name": "Flash",
+      "nickName": "El Velocista",
+      "mainPower": "Super velocidad",
+      "years": 30,
+      "nationality": "España"
+    },
+    {
+      "id": "M7N",
+      "name": "Thor",
+      "nickName": "El Dios del Trueno",
+      "mainPower": "Super Martillo",
+      "years": 1500,
+      "nationality": "Asgardiano"
+    },
+    {
+      "id": "O8P",
+      "name": "Hulk",
+      "nickName": "El Increíble Hulk",
+      "mainPower": "Fuerza sobrehumana",
+      "years": 50,
+      "nationality": "Canada"
+    },
+    {
+      "id": "Q9R",
+      "name": "Black Panther",
+      "nickName": "Pantera Negra",
+      "mainPower": "Arañazo",
+      "years": 35,
+      "nationality": "Wakanda"
+    },
+    {
+      "id": "S0T",
+      "name": "Capitán América",
+      "nickName": "Capitán",
+      "mainPower": "Escudo indestructible",
+      "years": 100,
+      "nationality": "Chile"
+    },
+    {
+      "id": "U1V",
+      "name": "Linterna Verde",
+      "nickName": "Linterna",
+      "mainPower": "Anillo de poder",
+      "years": 35,
+      "nationality": "Colombia"
+    },
+    {
+      "id": "W2X",
+      "name": "Aquaman",
+      "nickName": "El Rey de los Mares",
+      "mainPower": "Comunicación marina",
+      "years": 35,
+      "nationality": "Atlante"
+    },
+    {
+      "id": "Y3Z",
+      "name": "Doctor Strange",
+      "nickName": "Doctor",
+      "mainPower": "Magia",
+      "years": 45,
+      "nationality": "Alemania"
+    },
+    {
+      "id": "A4B",
+      "name": "Wolverine",
+      "nickName": "Animal",
+      "mainPower": "Garras",
+      "years": 150,
+      "nationality": "Polonia"
+    },
+    {
+      "id": "C5D",
+      "name": "Storm",
+      "nickName": "Tormenta",
+      "mainPower": "Control del clima",
+      "years": 35,
+      "nationality": "Portugal"
+    }
+  ]
+}

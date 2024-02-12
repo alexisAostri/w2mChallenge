@@ -1,0 +1,30 @@
+.button-align-center {
+    display: flex;
+    justify-content: center!important;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.table-container {
+    padding: 50px 10% 0 10%;
+}
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-container ::ng-deep.mat-mdc-text-field-wrapper {
+    width: 400px !important;
+}
+
+.id-container ::ng-deep.mat-mdc-text-field-wrapper {
+    width: 100px !important;
+}
+
+mat-hint {
+    color: gray;
+}

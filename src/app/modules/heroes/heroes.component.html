@@ -1,0 +1,27 @@
+<div class="button-align-center mt-20">
+    <button mat-raised-button color="primary" (click)="newHero()">
+        <mat-icon>add</mat-icon> Agregar héroe
+    </button>
+</div>
+
+<div class="table-container">
+    <div class="filters-container">
+        <div class="name-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input type="text" matInput [(ngModel)]="nameHero" (input)="getHeroesByName()">
+                <mat-hint>Filtrar por nombre</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="id-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input type="string" matInput [(ngModel)]="idHero">
+            </mat-form-field>
+            <button mat-button color="primary" (click)="getHeroById()">
+                Buscar por ID
+            </button>
+        </div>
+    </div>
+    <app-heroes-table [heroList]="heroList" (reload)="getAllHeros()"></app-heroes-table>
+</div>
