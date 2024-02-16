@@ -16,6 +16,7 @@ export class NewHeroComponent {
   public isEdit: boolean = false;
   public title: string = 'Nuevo héroe'
   public hero: Hero;
+  private heroList: Hero[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,13 +25,14 @@ export class NewHeroComponent {
     private router: Router
   ) {
     this.initForm();
-    this.hero = this.router.getCurrentNavigation()?.extras.state as Hero;
+    this.hero = this.router.getCurrentNavigation()?.extras?.state?.['hero'];
+    this.heroList = this.router.getCurrentNavigation()?.extras?.state?.['heroList']
     if (this.hero) {
       this.loadHero();
     }
   }
 
-  private initForm() :void{
+  private initForm(): void {
     this.newHeroForm = this.formBuilder.group({
       id: [''],
       name: ['', Validators.required],
@@ -56,15 +58,25 @@ export class NewHeroComponent {
   }
 
   public save(formValue: Hero): void {
-    if (this.hero) {
-      this.heroesService.updateHero(this.newHeroForm.value).subscribe(hero => {
-        this.cancel();
-      })
+    if (this.checkExisting(formValue.name)) {
+      const nameControl = this.newHeroForm.get('name');
+      nameControl?.markAsTouched();
+      nameControl?.setErrors({ 'existingName': true });
     } else {
-      this.heroesService.addHero(formValue).subscribe(heroes => {
-        this.cancel();
-      })
+      if (this.hero) {
+        this.heroesService.updateHero(this.newHeroForm.value).subscribe(hero => {
+          this.cancel();
+        })
+      } else {
+        this.heroesService.addHero(formValue).subscribe(heroes => {
+          this.cancel();
+        })
+      }
     }
+  }
+
+  private checkExisting(nameHero: string): boolean {
+    return this.heroList.some(hero => (hero.name == nameHero) && (hero.name != this.hero?.name));
   }
 
 }

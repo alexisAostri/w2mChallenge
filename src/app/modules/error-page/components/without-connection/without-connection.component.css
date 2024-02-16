@@ -1,0 +1,16 @@
+.error-container {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.icon {
+    display: block;
+    margin: 0 auto 40px;
+    width: 300px;
+}
+
+span {
+    display: block;
+    font-size: 20px;
+    color: gray;
+}

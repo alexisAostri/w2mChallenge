@@ -12,6 +12,10 @@ const routes: Routes = [
 		loadChildren: () => import('./modules/heroes/heroes.module').then((pm) => pm.HeroesModule),
 	},
 	{
+		path: 'error',
+		loadChildren: () => import('./modules/error-page/error-page.module').then((pm) => pm.ErrorPageModule),
+	},
+	{
 		path: '**',
 		redirectTo: 'heroes',
 	},
@@ -21,4 +25,4 @@ const routes: Routes = [
 	imports: [RouterModule.forRoot(routes)],
 	exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

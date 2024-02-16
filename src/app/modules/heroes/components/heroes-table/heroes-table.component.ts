@@ -40,7 +40,12 @@ export class HeroesTableComponent {
   }
 
   public editHero(hero: Hero): void {
-    this.router.navigate(['/heroes/edit-hero'], { state: hero });
+    this.router.navigate(['/heroes/edit-hero'], {
+      state: {
+        heroList: this.heroList,
+        hero: hero
+      }
+    });
   }
 
   public deleteHero(idHero: string): void {

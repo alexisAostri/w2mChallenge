@@ -11,6 +11,8 @@
                         <input type="text" matInput formControlName="name" maxlength="40" appUpperCase />
                         <mat-error *ngIf="newHeroForm.get('name')?.hasError('required')">El nombre es
                             requerido</mat-error>
+                        <mat-error *ngIf="newHeroForm.get('name')?.hasError('existingName')">El nombre ya
+                            existe</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="ml-30">

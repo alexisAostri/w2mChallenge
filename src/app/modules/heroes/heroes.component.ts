@@ -46,7 +46,11 @@ export class HeroesComponent implements OnInit {
   }
 
   public newHero(): void {
-    this.router.navigate(['/heroes/new-hero']);
+    this.router.navigate(['/heroes/new-hero'], {
+      state: {
+        heroList: this.heroList
+      }
+    });
   }
 
   public getHeroesByName(): void {
