@@ -24,7 +24,9 @@ export class LoadingRequestInterceptor implements HttpInterceptor {
           return throwError(error);
         }),
         finalize(() => {
-          this.loadingRequestService.setIsLoadingRequest(false);
+          setTimeout(() => {
+            this.loadingRequestService.setIsLoadingRequest(false);
+          }, 250);
         })
       );
     } else {
